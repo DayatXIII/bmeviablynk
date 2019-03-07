@@ -1,0 +1,93 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="col-md-12">
+        <h2>Hardware Connection: <label id="isHardwareConnected"></label></h2>
+        <p>Status: <label id="statusCode"></label></p>
+        <p>App Name: <label id="appName"></label></p>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-6" style="border: 1px; border-style:solid; border-radius: 5px; padding-top: 10px;">
+            <div class="col-md-8">
+                <h3><u>Brunei Darussalam Weather</u></h3>
+                <p>Temperature: <label id="bruneiTemp"></label></p>
+                <p>Humidity: <label id="bruneiHum"></label></p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-cloud-moon fa-6x"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" style="margin-top: 20px;">
+        <div class="col-md-3" style="border: 1px; border-style:solid; border-radius: 5px; padding-top: 10px;">
+            <p>Pin Number: <label id="tempPinNumber" class="label label-primary"></label></p>
+            <p>Sensor Name: <label id="tempSensorName"></label></p>
+            <p>Temperature: <label id="tempUpdate"></label></p>
+            <div id="aboveTemp" class="alert alert-danger" style="display: none">
+                <strong>Alert!</strong> Temperature is above 30C.
+            </div>
+            <div id="belowTemp" class="alert alert-info" style="display: none">
+                <strong>Alert!</strong> Temperature is below 30C.
+            </div>
+        </div>
+
+        <div class="col-md-3" style="border: 1px; border-style:solid; border-radius: 5px; padding-top: 10px;">
+            <p>Pin Number: <label id="humPinNumber" class="label label-success"></label></p>
+            <p>Sensor Name: <label id="humSensorName"></label></p>
+            <p>Humidity: <label id="humUpdate"></label></p>
+            <div id="aboveHum" class="alert alert-danger" style="display: none">
+                <strong>Alert!</strong> Humidity is above 50%.
+            </div>
+            <div id="belowHum" class="alert alert-info" style="display: none">
+                <strong>Alert!</strong> Humidity is below 50%.
+            </div>
+        </div>
+
+        <div class="col-md-3" style="border: 1px; border-style:solid; border-radius: 5px; padding-top: 10px;">
+            <p>Pin Number: <label id="pressPinNum" class="label label-warning"></label></p>
+            <p>Sensor Name: <label id="pressSensorName"></label></p>
+            <p>Pressure: <label id="pressUpdate"></label></p>
+            <div id="abovePress" class="alert alert-danger" style="display: none">
+                <strong>Alert!</strong> Pressure is above 1100hpa.
+            </div>
+            <div id="belowPress" class="alert alert-info" style="display: none">
+                <strong>Alert!</strong> Pressure is below 1100hpa.
+            </div>
+        </div>
+
+        <div class="col-md-3" style="border: 1px; border-style:solid; border-radius: 5px; padding-top: 10px;">
+            <p>Pin Number: <label id="altPinNum" class="label label-default"></label></p>
+            <p>Sensor Name: <label id="altSensorName"></label></p>
+            <p>Altitude: <label id="altUpdate"></label></p>
+            <div id="aboveAlt" class="alert alert-danger" style="display: none">
+                <strong>Alert!</strong> Altitude is above 100m.
+            </div>
+            <div id="belowAlt" class="alert alert-info" style="display: none">
+                <strong>Alert!</strong> Altitude is below 50m.
+            </div>
+        </div>
+</body>
+
+<script src="logics.js"></script>
+<script src="main.js"></script>
+<script src="main1.js"></script>
+<script src="progressbar.js"></script>
+
+</html>
